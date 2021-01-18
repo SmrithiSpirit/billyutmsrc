@@ -12,8 +12,8 @@ window.addEventListener('message', function(eventData) {
       return;
   }
    if(event.event_code === "custom-event" && event.data && event.data.code === "utm-src"){
-    var x = localStorage.getItem("conv_session")
-    console.log(x,"check for utm src")
+    var x = JSON.parse(localStorage.getItem("conv_session"))
+    console.log(x.utm_source,"check for utm src")
    }
 }
   return;
