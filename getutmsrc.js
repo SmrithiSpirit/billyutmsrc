@@ -12,9 +12,10 @@ window.addEventListener('message', function(eventData) {
       return;
   }
    if(event.event_code === "custom-event" && event.data && event.data.code === "utm-src"){
-    var url = JSON.parse(localStorage.getItem("conv_session"))
+    var x = JSON.parse(localStorage.getItem("conv_session"))
+    var url = x.referrer
     var arr = url.split('/')
-    console.log(arr[1].referrer,"check for utm src")
+    console.log(arr[1],"check for utm src")
    }
 }
   return;
