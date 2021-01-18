@@ -12,7 +12,7 @@ window.addEventListener('message', function(eventData) {
       return;
   }
    if(event.event_code === "custom-event" && event.data && event.data.code === "utm-src"){
-    var x = localStorage.getItem("utm_source")
+    var x = localStorage.getItem("conv_session")
     console.log(x,"check for utm src")
    }
 }
