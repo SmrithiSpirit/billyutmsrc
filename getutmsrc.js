@@ -13,7 +13,7 @@ window.addEventListener('message', function(eventData) {
   }
    if(event.event_code === "custom-event" && event.data && event.data.code === "utm-src"){
     var x = localStorage.getItem("utm_source")
-    console.log(x)
+    console.log(x,"check for utm src)
    }
 }
   return;
