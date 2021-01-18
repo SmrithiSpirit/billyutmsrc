@@ -15,7 +15,7 @@ window.addEventListener('message', function(eventData) {
     var x = JSON.parse(localStorage.getItem("conv_session"))
     var url = x.referrer
     var arr = url.split('/')
-    console.log(arr,"check for utm src")
+    console.log(url,"check for utm src")
    }
 }
   return;
