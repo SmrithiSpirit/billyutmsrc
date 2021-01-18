@@ -13,7 +13,7 @@ window.addEventListener('message', function(eventData) {
   }
    if(event.event_code === "custom-event" && event.data && event.data.code === "utm-src"){
     var x = JSON.parse(localStorage.getItem("conv_session"))
-    var url_string = x.referrer
+    var url_string = x.startUrl
     var url = new URL(url_string);
     var c = url.searchParams.get("utm_source");
     console.log(c,"check for utm src")
