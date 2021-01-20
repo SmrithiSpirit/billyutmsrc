@@ -15,8 +15,13 @@ window.addEventListener('message', function(eventData) {
     var x = JSON.parse(localStorage.getItem("conv_session"))
     var url_string = x.startUrl
     var url = new URL(url_string);
-    var c = url.searchParams.get("utm_source");
-    console.log(c,"check for utm src")
+    var allUtmDetails = []
+    var utm_src = url.searchParams.get("utm_source");
+    var utm_medium = url.searchParams.get("utm_medium");
+    var utm_campaign = url.searchParams.get("utm_campaign");
+    allUtmDetails.push(utm_src,utm_medium,utm_campaign)
+    
+    console.log(allUtmDetails,"check for utm src")
    }
 }
   return;
